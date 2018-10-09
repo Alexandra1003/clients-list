@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import ListItem from './listItem.js';
+import ClientDetails from './clientDetails.js';
+import SearchInput from './searchInput.js';
 
 var clients = [
   {
@@ -69,51 +72,7 @@ var clients = [
   }
 ];
 
-class ListItem extends Component {
-  render() {
-    return (
-      <div className="listItemContainer">
-        <img className="listItemAvatar" src={this.props.client.general.avatar} alt="" />
-        <div>{this.props.client.general.firstName + " " + this.props.client.general.lastName}</div>
-        <div>{this.props.client.job.title}</div>
-      </div>
-    );
-  }
-}
-
 var selectedClient = clients[0];
-
-class ClientDetails extends Component {
-  render() {
-    return (
-      <div className="clientDetailsContainer">
-        <img className="clientDetailsAvatar" src={this.props.client.general.avatar} alt="" />
-        <div>{this.props.client.general.firstName + " " + this.props.client.general.lastName}</div>
-        <div>{this.props.client.job.company}</div>
-        <div>{this.props.client.job.title}</div>
-
-        <div>{this.props.client.contact.email}</div>
-        <div>{this.props.client.contact.phone}</div>
-
-        <div>{this.props.client.address.street}</div>
-        <div>{this.props.client.address.city}</div>
-        <div>{this.props.client.address.zipCode}</div>
-        <div>{this.props.client.address.country}</div>
-      </div>
-    );
-  }
-}
-
-class SearchInput extends Component {
-  render() {
-    return (
-      <div className="searchInputContainer">
-        <input/>
-        <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png" alt=""/>
-      </div>
-    );
-  }
-}
 
 class App extends Component {
   render() {
