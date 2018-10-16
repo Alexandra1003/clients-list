@@ -1,42 +1,19 @@
-.listItemContainer {
-  height: 150px;
-  width: 250px;
-  border: 1px solid black;
+.App {
+  height: 100%;
+  position: fixed;
 }
 
-.listItemAvatar {
-  height: 50px;
-  width: 50px;
+.left-bar {
+  overflow-y: auto;
 }
 
-.clientDetailsContainer {
-  height: 800px;
-  width: 1095px;
-  border: 1px solid black;
-  float: right;
+.inform-message {
+  margin-top: 30px;
 }
 
-.searchInputContainer {
+.wrapper {
   display: flex;
   flex-direction: row;
-}
-
-.searchInputContainer input {
-  width: 200px;
-  height: 30px;
-}
-
-.searchInputContainer img {
-  width: 50px;
-  height: 36px;
- 
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: space-between;
+  align-items: center;
 }

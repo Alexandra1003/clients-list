@@ -16,9 +16,7 @@ class ClientsList extends Component {
     render() {
         return (
             <div>
-                <ol>
                     {this.showList()}
-                </ol>
             </div>
         );
     }

@@ -2,19 +2,22 @@ import React, { Component } from 'react';
 class ClientDetails extends Component {
     render() {
         return (
-            <div className="clientDetailsContainer">
-                <img className="clientDetailsAvatar" src={this.props.client.general.avatar} alt="" />
-                <div>{this.props.client.general.firstName + " " + this.props.client.general.lastName}</div>
-                <div>{this.props.client.job.company}</div>
-                <div>{this.props.client.job.title}</div>
+            <div>
+                <div className="ui basic left floated segment">
+                    <img className="ui image circular" src={this.props.client.general.avatar} alt="" />
+                </div>
+                <div className="ui basic left floated segment">
+                    <h1 className="ui header">{this.props.client.general.firstName + " " + this.props.client.general.lastName}</h1>
+                    <h3 className="ui header">{this.props.client.job.title} - {this.props.client.job.company}</h3><br />
 
-                <div>{this.props.client.contact.email}</div>
-                <div>{this.props.client.contact.phone}</div>
+                    <h4 className="ui header">Email: </h4> <span className="meta">{this.props.client.contact.email}</span><br />
+                    <h4 className="ui header">Contact phone: </h4> <span className="meta">{this.props.client.contact.phone}</span><br />
 
-                <div>{this.props.client.address.street}</div>
-                <div>{this.props.client.address.city}</div>
-                <div>{this.props.client.address.zipCode}</div>
-                <div>{this.props.client.address.country}</div>
+                    <h4 className="ui header">Street: </h4> <span className="meta">{this.props.client.address.street}</span><br />
+                    <h4 className="ui header">City: </h4> <span className="meta">{this.props.client.address.city}</span><br />
+                    <h4 className="ui header">Zip Code: </h4> <span className="meta">{this.props.client.address.zipCode}</span><br />
+                    <h4 className="ui header">Country: </h4> <span className="meta">{this.props.client.address.country}</span><br />
+                </div>
             </div>
         );
     }

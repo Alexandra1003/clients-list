@@ -7,10 +7,12 @@ import SearchInput from './components/searchInput.js';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Details />
-        <SearchInput />
-        <ClientsList />
+      <div className="App ui grid container">
+        <div className="four wide column left-bar">
+          <SearchInput />
+          <ClientsList />
+        </div>
+        <Details className="twelve wide column" />
       </div>
     );
   }
